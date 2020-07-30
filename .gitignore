@@ -1,0 +1,9 @@
+.gradle/
+*.iml
+.idea/
+local.properties
+build/
+*.apk
+!.gitkeep
+session_analytics.tap
+session_analytics_to_send/

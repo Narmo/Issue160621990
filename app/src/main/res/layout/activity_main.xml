@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:padding="32dp"
+	tools:context=".MainActivity">
+
+	<world.facesof.issue160621990.ImageStack
+		android:id="@+id/stack"
+		android:layout_width="@dimen/item_width"
+		android:layout_height="@dimen/item_height"
+		android:clickable="false"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="12dp"
+		android:gravity="center"
+		android:text="This stack is shown with proper fill color"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/stack" />
+
+	<world.facesof.issue160621990.ImageStackAttributed
+		android:id="@+id/stack_attributed"
+		android:layout_width="@dimen/item_width"
+		android:layout_height="@dimen/item_height"
+		android:layout_marginTop="64dp"
+		android:clickable="false"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/stack" />
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="12dp"
+		android:gravity="center"
+		android:text="This stack is not shown with proper fill color (fill color is set as ?android:colorBackground in resource file)"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/stack_attributed" />
+
+	<TextView
+		android:id="@+id/device_details_label"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
